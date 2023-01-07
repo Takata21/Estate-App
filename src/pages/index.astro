@@ -1,9 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import { Picture } from '@astrojs/image/components'
+import Hero from '../components/Hero.astro'
+import Estates from '../components/Estates.astro'
+const imgUrl =
+	'https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4'
 ---
 
-<Layout title='Welcome to Astro.'>
-	<main>Hello</main>
+<Layout title='UAE eSTATE'>
+	<main>
+		<Hero />
+		<Estates />
+	</main>
 </Layout>
 
 <style></style>
