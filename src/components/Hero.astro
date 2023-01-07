@@ -1,0 +1,29 @@
+---
+import { Picture } from '@astrojs/image/components'
+const imgUrl =
+	'https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4'
+---
+
+<section class='flex justify-center items-center gap-5'>
+	<div>
+		<Picture
+			class='w-[500px] h-[300px]'
+			src={imgUrl}
+			widths={[200, 500, 800]}
+			aspectRatio='4:3'
+			sizes='(max-width: 800px) 100vw, 800px'
+			alt='Rent a house'
+		/>
+	</div>
+	<div>
+		<span class='text-gray-400 font-semibold'>RENT A HOME</span>
+		<h2 class='text-3xl font-bold my-4'>Rental Homes for <br /> Everyone</h2>
+		<p class='font-semibold text-gray-900'>
+			Explore from Apartments, builder floors, villas <br /> and more
+		</p>
+		<a
+			class='bg-sky-500 text-white p-3 block w-4/6 my-6 rounded-md font-bold text-center hover:bg-gray-400 transition-colors'
+			href=''>Explore Renting</a
+		>
+	</div>
+</section>
