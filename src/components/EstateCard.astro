@@ -18,14 +18,9 @@ const {
 ---
 
 <a href={`/property/${id}`}>
-	<article class='max-w-sm'>
-		<Picture
-			src={img}
-			widths={[200, 500, 800]}
-			aspectRatio='4:3'
-			sizes='(max-width: 800px) 100vw, 800px'
-			alt={alt}
-		/>
+	<article class='max-w-sm aspect-auto'>
+		<img class='aspect-square' src={img} alt='' loading='lazy' />
+
 		<div class='flex flex-col mt-4'>
 			<div class='flex justify-between items-center'>
 				<div class='flex items-center gap-4'>
