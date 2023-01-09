@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 	const data = [...forRent, ...forSale]
 	console.log(data)
 	return data.map((property) => {
-		return [{ params: { id: property.externalID }, props: { ...property } }]
+		return [{ params: { propertyId: property.externalID }, props: { ...property } }]
 	})
 }
 const {
