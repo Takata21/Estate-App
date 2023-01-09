@@ -1,11 +1,12 @@
 ---
 import EstateCard from './EstateCard.astro'
 const { data } = Astro.props
+const lightData = data.slice(0, 5)
 ---
 
 <section class='flex justify-center gap-5 flex-wrap p-5 my-8'>
 	{
-		data.map((item) => {
+		lightData.map((item) => {
 			return (
 				<EstateCard
 					id={item.externalID}

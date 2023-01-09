@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { getEstates } from '../../services/GetEstates'
+
+export async function getStaticPaths() {
+	const forRent = await getEstates('for-rent')
+	const forSale = await getEstates('for-sale')
+	const data = [...forRent, ...forSale]
+	console.log(data)
+	return data.map((property) => {
+		return [{ params: { id: property.externalID }, props: { ...property } }]
+	})
+}
+const {
+	price,
+	rentFrequency,
+	rooms,
+	title,
+	baths,
+	area,
+	agency,
+	isVerified,
+	description,
+	type,
+	purpose,
+	furnishingStatus,
+	amenities,
+	photos
+} = Astro.props
+---
+
+<Layout title={title}>
+	<p>{description}</p>
+</Layout>
